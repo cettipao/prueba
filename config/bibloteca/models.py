@@ -15,3 +15,11 @@ class Libro(models.Model):
         null = False,
     )
 
+class Ejemplar(models.Model):
+    localizacion = models.CharField(max_length = 20)
+    libro = models.ForeignKey(
+        'Libro',
+        on_delete=models.CASCADE,
+        null = False,
+    )
+
